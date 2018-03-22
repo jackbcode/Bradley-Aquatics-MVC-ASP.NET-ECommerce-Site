@@ -1,0 +1,13 @@
+﻿@model IEnumerable<BradleyAquatics.Models.tblCategory>
+
+
+
+
+<ul class = "categoriesList">
+    @foreach (var item in Model)
+    {
+        <li class="nav-item"><a class="nav-link" href="/ShopThree/Category/@item.Slug">@item.Name</a></li>
+    }
+</ul>
+
+

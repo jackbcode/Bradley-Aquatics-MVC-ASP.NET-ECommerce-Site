@@ -1,0 +1,12 @@
+﻿@model BradleyAquatics.Models.ViewModels.Cart.CartVM
+
+<div class="ajaxcart">
+     <div >
+    <i class="ion-android-cart"></i> @Model.Quantity item(s) - £@Model.Price
+         </div>
+    
+    <div class="checkoutName">
+        @Html.ActionLink("Checkout", "Index")
+    </div>
+
+</div>

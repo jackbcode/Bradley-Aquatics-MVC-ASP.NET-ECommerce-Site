@@ -1,0 +1,94 @@
+﻿@model BradleyAquatics.Models.tblpage
+
+@{
+    ViewBag.Title = ViewBag.PageTitle;
+}
+
+
+
+            <div class="imgdiv">
+                <img src="~/Images/fishmain.png" id="mainImage" />
+            </div>
+            <div>
+                <p class="loginInfo">To purchase items please create an account or <a id="loginA" href="/account/login">Login</a> as a Guest</p>
+            </div>
+            <div>
+                <br />
+                <h3 id="welcome">Welcome to Bradley <i class="ion-waterdrop"></i>quatics </h3>
+                <br />
+                <p>
+                    Welcome to my MVC ASP.NET E-Commerce Site. Please do look around. If you would like to
+                    purchase any items please create an account or log in using the credentials supplied.
+                    You can log in at by following the LOGIN link located in the Navigation Bar.
+                </p>
+                <p>
+                    This site also has an admin area allowing staff to update categories and there position on the navigation bar.
+                    As well as add and edit new products as the wish. Feel free to look around and get in touch to let me know what you think.
+                </p>
+                <br />
+
+            </div>
+
+            <h3>Our featured fish </h3>
+            <br />
+
+            <div class="row col-12">
+                <div class="col-md-3 pidiv">
+
+
+                    <img class="pageImage" src="~/Images/surgeon-fish.jpg" />
+                    <a class="frImage" href="/shopThree/product-details/surgeon-fish,-acanthuridae">SURGEON FISH, ACANTHURIDAE</a>
+
+
+                </div>
+                <div class="col-md-3 pidiv">
+
+                  
+                    <img class="pageImage" src="~/Images/seaHorse.jpg" />
+                    <a class="frImage" href="/shopThree/product-details/seahorse,-hippocampus">SEAHORSE, HIPPOCAMPUS</a>
+
+                </div>
+                <div class="col-md-3 pidiv">
+
+                    <img class="pageImage" src="~/Images/longhorn-cowfish.jpg" />
+                    <a class="frImage" href="/shopThree/product-details/cowfish,-lactoria-cornuta">COWFISH, LACTORIA CORNUTA</a>
+
+
+                </div>
+                <div class="col-md-3 pidiv">
+                    <img class="pageImage" src="~/Images/Unicorn-Fish.jpg" />
+                    <a class="frImage" href="/shopThree/product-details/unicorn-fish,-acanthuridae">UNICORN FISH, ACANTHURIDAE</a>
+
+                </div>
+            </div> <br />
+            <div class="row col-12">
+                <div class="col-md-3 pidiv">
+
+                    <img class="pageImage" src="~/Images/Fighting-Fish.jpg" />
+                    <a class="frImage" href="/shopThree/product-details/siamese-fighting-fish,-betta">SIAMESE FIGHTING FISH, BETTA</a>
+
+
+                </div>
+                <div class="col-md-3 pidiv">
+
+
+                    <img class="pageImage" src="~/Images/Catfish.jpg" />
+                    <a class="frImage" href="/shopThree/product-details/catfish,-siluriformes-">CATFISH, SILURIFORMES</a>
+
+                </div>
+                <div class="col-md-3 pidiv">
+
+                    <img class="pageImage" src="~/Images/piranha.jpg" />
+                    <a class="frImage" href="/shopThree/product-details/piranha,-characiformes">PIRANHA, CHARACIFORMES</a>
+
+                </div>
+                <div class="col-md-3 pidiv">
+
+                    <img class="pageImage" src="~/Images/Discus-Cichlid.jpg" />
+                    <a class="frImage" href="/shopThree/product-details/discus-cichlid,--cichlidae">DISCUS CICHLID, CICHLIDAE</a>
+
+                </div>
+            </div>
+            <br /><br />
+
+            @*@Html.Raw(Model.Body)*@

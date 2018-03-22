@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="aquaticsOneModelStoreContainer" CdmEntityContainer="aquaticsOneEntities5">
+    <EntitySetMapping Name="tblCategories">
+      <EntityTypeMapping TypeName="aquaticsOneModel.tblCategory">
+        <MappingFragment StoreEntitySet="tblCategories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Slug" ColumnName="Slug" />
+          <ScalarProperty Name="Sorting" ColumnName="Sorting" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblpages">
+      <EntityTypeMapping TypeName="aquaticsOneModel.tblpage">
+        <MappingFragment StoreEntitySet="tblpages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Slug" ColumnName="Slug" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Sorting" ColumnName="Sorting" />
+          <ScalarProperty Name="HasSideBar" ColumnName="HasSideBar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSidebars">
+      <EntityTypeMapping TypeName="aquaticsOneModel.tblSidebar">
+        <MappingFragment StoreEntitySet="tblSidebar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Bradley Aquatics</title>
+    <link href="~/Content/ionicons.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div class="headerBackground fixed-top"></div>
+   <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+     <a class="navbar-brand" id="aquatics" href="#">Bradley <i class="ion-waterdrop"></i>quatics</a> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+       <div class="collapse navbar-collapse" id="navbarColor03">
+           <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                   <a class="nav-link " @Html.ActionLink("Home", "Index", "Home")  <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+               <a class="nav-link" href="/ShopThree/All">Fish</a>
+               </li>
+               @*<li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Our Fish</a>
+                   <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 37px, 0px); top: 0px; left: 0px; will-change: transform;">
+                       @Html.Action("CategoryMenuPartial", "ShopThree")
+                   </div>*@
+
+                @Html.Action("CategoryMenuPartial", "ShopThree")
+
+               @*<li class="nav-item">
+                   <a class="nav-link" href= "ShopThree/Category/marine-fish">Marine</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="ShopThree/Category/tropical-fish">Tropical</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="ShopThree/Category/coldwater-fish">Coldwater</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="ShopThree/Category/pond-fish">Pond</a>
+               </li>
+               <li class="nav-item">
+                   <a class="nav-link" href="ShopThree/Category/plants">Plants</a>
+               </li>*@
+
+              
+           
+                   @if (Request.IsAuthenticated)
+                   {
+                   <li class="nav-link"><a href="/account/logout">Logout</a></li>
+                   }
+                   else
+                   {
+                       if (ViewBag.Title == "Login")
+                       {
+                           <li class="nav-link login"><a class="login" href="/account/login">Login</a></li>
+                       }
+                       else
+                       {
+                           <li class="nav-link login"><a class="login" href="/account/login">Login</a></li>
+                       }
+                   }
+
+                   @if (Request.IsAuthenticated && !User.Identity.Name.Equals("admin"))
+
+                   {
+                       if (ViewBag.Title == "User Profile" || ViewBag.Title == "Orders")
+                       {
+                           <li class="active nav-link">@Html.Action("UserNavPartial", "Account", new { area = "" })</li>
+                       }
+                       else
+                       {
+                           <li class="nav-link">@Html.Action("UserNavPartial", "Account", new { area = "" })</li>
+                       }
+                   }
+               </ul>
+
+                   @if (Request.IsAuthenticated && User.Identity.Name.Equals("admin"))
+                   {
+
+                       <button type="button" class=" btn-admin btn btn-info ">@Html.ActionLink("Admin Area", "Index", "Dashboard", new { area = "Admin" }, null) </button>
+                   }
+                   else
+                   {
+                       if (ViewBag.Title != "Cart Details")
+                       {
+                           
+                               @Html.Action("CartPartial", "Cart")
+                         
+                       }
+                   }
+           
+
+
+
+</div>
+
+</nav>
+
+    @using (Html.BeginForm("SearchDetails", "Home", FormMethod.Get))
+            {
+        <div class="searchFish right">
+
+
+            <p class="right">
+                @Html.TextBox("SearchString")
+                <input type="submit" value="Search" placeholder="Search.." id="searchBox" />
+            </p>
+
+        </div>
+        <br />
+
+        if (TempData["SM"] != null)
+        {
+            <div class="alert alert-info alert-dismissible col-md-4 noFish">
+               
+                @TempData["SM"]
+            </div>
+        }
+    }
+
+
+    <div class="container body-content">
+        <div class="ajaxbg"><span><img src="~/Content/img/ajax-loader.gif" /></span></div>
+            @RenderBody()
+            <hr />
+
+         @*@if (ViewBag.Title == "User Profile")
+            {
+                <div class="col-xs-12 col-md-2">
+                    
+                      <a href="/account/orders" class="btn-primary btn">My Orders</a>
+                    
+                </div>
+            }
+
+            @if (ViewBag.Title == "Orders")
+            {
+                <div class="col-xs-12 col-md-2">
+                   
+                        <a href="/account/user-profile" class="btn-primary btn">My Profile</a>
+                  
+                </div>
+            }*@
+        </div>
+      
+        
+    
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/popper")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

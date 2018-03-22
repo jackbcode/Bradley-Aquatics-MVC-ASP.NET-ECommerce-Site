@@ -1,0 +1,5 @@
+﻿@model BradleyAquatics.Models.ViewModels.Cart.CartVM
+
+<i class="ion-android-cart"></i> @Model.Quantity item(s) - £@Model.Price
+<br />
+@Html.ActionLink("Checkout", "Index")

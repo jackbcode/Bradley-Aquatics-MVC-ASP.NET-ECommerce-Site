@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="18677f73bb1f4e9583078611c679abb4" Name="Diagram1">
+        <EntityTypeShape EntityType="BradleyAquaticsDbModel.sysdiagram" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BradleyAquaticsDbModel.tblCategory" Width="1.5" PointX="1.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BradleyAquaticsDbModel.tblOrderDetail" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BradleyAquaticsDbModel.tblOrder" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="BradleyAquaticsDbModel.tblpage" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BradleyAquaticsDbModel.tblproduct" Width="1.5" PointX="4.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BradleyAquaticsDbModel.tblUser" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="BradleyAquaticsDbModel.FK_tblproduct_tblCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="BradleyAquaticsDbModel.FK_tblOrderDetails_tblOrders1" ManuallyRouted="false" />
+        <AssociationConnector Association="BradleyAquaticsDbModel.FK_tblOrderDetails_tblproduct" ManuallyRouted="false" />
+        <AssociationConnector Association="BradleyAquaticsDbModel.FK_tblOrderDetails_tblUser" ManuallyRouted="false" />
+        <AssociationConnector Association="BradleyAquaticsDbModel.FK_tblOrders_tblUser" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

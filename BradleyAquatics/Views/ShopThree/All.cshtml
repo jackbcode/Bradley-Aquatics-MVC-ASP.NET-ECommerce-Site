@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BradleyAquatics.Models.tblproduct>
+
+@{
+    ViewBag.Title = "All";
+}
+
+
+<h3 class="cathead">All of our Fish </h3>
+
+
+
+
+<div class="row col-12 grid">
+    
+
+
+    @foreach (var item in Model)
+    {
+        <div class=" pidiv row col-md-4">
+            <div class="catImage"> <img class="catImage" src="/Images/Uploads/Products/@item.Id/Thumbs/@item.ImageName" /></div>
+            <br />
+
+            <div class="col-12 modelItem">@Html.DisplayFor(modelItem => item.Name)<br /></div>
+
+            <div class="col-11 modelPrice"> £@Html.DisplayFor(modelItem => item.Price)<br /></div>
+
+
+            <div class="col-12"><a class="btn-primary btn modelDetails" href="/shopThree/product-details/@item.Slug">Details</a></div>
+
+            @*@Html.DisplayFor(modelItem => item.Description)*@
+
+
+
+
+
+       
+        </div>
+    }
+ </div>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="aquaticsOneModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblCategories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar(max)" />
+    <Property Name="Slug" Type="varchar(max)" />
+    <Property Name="Sorting" Type="int" />
+  </EntityType>
+  <EntityType Name="tblpages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar(max)" />
+    <Property Name="Slug" Type="varchar(max)" />
+    <Property Name="Body" Type="varchar(max)" />
+    <Property Name="Sorting" Type="int" />
+    <Property Name="HasSideBar" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSidebar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Body" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="aquaticsOneModelStoreContainer">
+    <EntitySet Name="tblCategories" EntityType="Self.tblCategories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblpages" EntityType="Self.tblpages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSidebar" EntityType="Self.tblSidebar" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

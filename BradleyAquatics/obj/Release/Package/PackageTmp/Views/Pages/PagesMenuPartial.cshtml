@@ -1,0 +1,8 @@
+﻿@model IEnumerable<BradleyAquatics.Models.tblpage>
+
+
+
+@foreach (var item in Model) {
+  <li a href="/@item.Slug">@item.Title</li>
+}
+

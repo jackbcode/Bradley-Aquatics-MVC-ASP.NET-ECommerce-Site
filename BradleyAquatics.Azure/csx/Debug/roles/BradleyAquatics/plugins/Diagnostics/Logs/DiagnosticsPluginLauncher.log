@@ -1,0 +1,17 @@
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] Emulator config file set to C:\Users\JB\source\repos\BradleyAquatics\BradleyAquatics.Azure\csx\Debug\roles\BradleyAquatics\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] DiagnosticsStoreRootPath set to: C:\Users\JB\AppData\Local\dftmp\Resources\2975989c-a4b1-41f2-99e9-fbb8a56e9de8
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] Loading config file: C:\Users\JB\source\repos\BradleyAquatics\BradleyAquatics.Azure\csx\Debug\roles\BradleyAquatics\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] Config file to read: C:\Users\JB\source\repos\BradleyAquatics\BradleyAquatics.Azure\csx\Debug\roles\BradleyAquatics\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] Checking VM Type
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] Emulator config file set to C:\Users\JB\source\repos\BradleyAquatics\BradleyAquatics.Azure\csx\Debug\roles\BradleyAquatics\approot\diagnostics.wadcfgx
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] Extension set to Emulator Mode
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] Reading XML configuration file
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] Bypassing private config decryption
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:25] Stopping the running plugin, if any
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:26] No DiagnosticsPlugin is running.
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:26] Killing any DiagnosticsPlugin that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:26] Killing any MonAgentHost that might remain.
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:26] Diagnostics plugin stopped successfully
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:06:26] Resetting DiagnosticPlugin
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:07:36] DiagnosticsPlugin launched successfully with new configuration
+DiagnosticsPluginLauncher.exe Information: 0 : [22/03/2018 14:07:36] DiagnosticPlugin exited with code 0

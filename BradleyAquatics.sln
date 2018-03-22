@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BradleyAquatics", "BradleyAquatics\BradleyAquatics.csproj", "{2A479788-16F0-4F8B-A8FF-841A65F93136}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "BradleyAquatics.Azure", "BradleyAquatics.Azure\BradleyAquatics.Azure.ccproj", "{4C4658CC-7190-4999-8EBE-FA1877E0A110}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A479788-16F0-4F8B-A8FF-841A65F93136}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A479788-16F0-4F8B-A8FF-841A65F93136}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A479788-16F0-4F8B-A8FF-841A65F93136}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A479788-16F0-4F8B-A8FF-841A65F93136}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C4658CC-7190-4999-8EBE-FA1877E0A110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4658CC-7190-4999-8EBE-FA1877E0A110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4658CC-7190-4999-8EBE-FA1877E0A110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4658CC-7190-4999-8EBE-FA1877E0A110}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7D19FAB-B067-4A80-82F6-FE7597B77954}
+	EndGlobalSection
+EndGlobal

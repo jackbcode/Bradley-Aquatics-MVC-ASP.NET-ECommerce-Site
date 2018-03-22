@@ -1,0 +1,68 @@
+﻿@model BradleyAquatics.Models.ViewModels.Account.LoginUserVM
+
+@{
+    ViewBag.Title = "Login";
+    
+}
+
+<h2>Login</h2>
+
+<p class="adminInfo">To access Admin area please use <u>admin</u> for both fields.</p>
+
+<p class="guestInfo">To access as a Guest please use <u>guest</u> for both fields, or please create an account. </p>
+
+@if (TempData["SM"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SM"]
+    </div>
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control" } )
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="RememberMe">Remember Me</label>
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.RememberMe)
+                    @Html.ValidationMessageFor(model => model.RememberMe, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+
+    <div id="createAccount" >
+        <a  href="/account/create-account">Haven't got a login? Create an account</a>
+    </div>
+
+
+    
+}
+
